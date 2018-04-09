@@ -79,6 +79,10 @@ class ODHFront {
 
         if (!this.enabled)
             return;
+        
+        // only popup translate with activateKey
+        if(!(e.keyCode === this.activateKey || e.charCode === this.activateKey))
+            return;
 
         this.mousemoved = false;
         // reset selection timeout
